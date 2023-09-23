@@ -1,21 +1,40 @@
 [
   {
-    "name": "好耶",
-    "path": "好耶.mp3",
-    "date": "2020-11-25",
+    "name": "青眼白龙",
+    "path": "blue-eyes-white-dragon.mp3",
+    "date": "2023-9-23",
     "translate": {
-      "zh-CN": "好耶",
-      "en-US": "Haoye"
+      "zh-CN": "青眼白龙",
+      "en-US": "Blue eyes white dragon"
     },
     "usePicture": {
-      "zh-CN": "好耶.jpg",
-      "en-US": "好耶.jpg"
+      "zh-CN": "dragon.jpg",
+      "en-US": "dragon.jpg"
     },
     "category": "名言",
     "mark": {
-      "title": "【Hiiro Record】11.24 Tue.读棉花糖",
-      "time": "59:33~59:34",
-      "url": "https://www.bilibili.com/video/BV1gy4y1q7cC"
+      "title": "【唱歌杂谈】星河Sagi 2023年9月12日20点场",
+      "time": "27:56~28:00",
+      "url": "https://www.bilibili.com/video/BV1hz4y1573x/?share_source=copy_web&vd_source=df4dd1f3c7198704ab5aff86712a57db&t=1676"
+    }
+  },
+  {
+    "name": "多拉贡",
+    "path": "dragon.mp3",
+    "date": "2023-9-23",
+    "translate": {
+      "zh-CN": "多拉贡",
+      "en-US": "Dragon"
+    },
+    "usePicture": {
+      "zh-CN": "dragon.jpg",
+      "en-US": "dragon.jpg"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【唱歌杂谈】星河Sagi 2023年9月12日20点场",
+      "time": "28:00~28:04",
+      "url": "https://www.bilibili.com/video/BV1hz4y1573x/?share_source=copy_web&vd_source=df4dd1f3c7198704ab5aff86712a57db&t=1680"
     }
   }
 ]
