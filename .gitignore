@@ -23,7 +23,7 @@ pnpm-debug.log*
 *.sw?
 
 # Python script
-scripts
+scripts/*
 !scripts/last_export_time
 !scripts/parse_excel.py
 !scripts/requirements.txt
