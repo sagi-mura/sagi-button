@@ -16,7 +16,7 @@
 - 请求添加新语音，请在[Sagi Button音频收集表](https://docs.qq.com/form/page/DR01DZWpLRHZOUVRI)提交你的音频
     - 我会不定期将收集表的音频更新到[https://sagi.moe/](http://sagi.moe/)上
     - 如果你发现收集表中的音频已经被添加到[https://sagi.moe/](http://sagi.moe/)上，那么请不要再次提交
-    - 如果你发现收集表中的音频已经被添加到[https://sagi.moe/](http://sagi.moe/)上，但是你认为音频的质量不够好，请直接Bilibili私信我
+    - 如果你发现收集表中的音频已经被添加到[https://sagi.moe/](http://sagi.moe/)上，但是你认为音频的质量不够好，请直接[Bilibili](https://space.bilibili.com/382322)私信我
 
 ### 添加或修改音频/完善翻译
 
