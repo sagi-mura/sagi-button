@@ -1,4 +1,4 @@
-name: Publish
+name: Deploy
 
 on:
   push:
@@ -9,9 +9,12 @@ on:
 
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  publish:
-    name: Publish
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -31,9 +34,10 @@ jobs:
         with:
           cmd: build # will run `yarn build` command
 
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          name: sagi-button
-          path: |
-            dist
+          folder: dist # The folder the action should deploy.
+#          clean: true
+#          force: true
+#          single-commit: true
