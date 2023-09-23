@@ -6,7 +6,9 @@
           <template #header>
             <div class="category">
               <template v-if="playSetting.showInfo">
-                <a :href="item['url']" target="_blank">
+<!--                bilibili sometimes intercepts the external link, add nofollow noreferrer noopener to resolve-->
+<!--                https://www.xkww3n.cyou/2020/03/14/research-bilibili/-->
+                <a rel= "nofollow noreferrer noopener" :href="item['url']" target="_blank">
                   {{
                     item['title'] === "unknown" ? t("unknown") : item['title']
                   }}
