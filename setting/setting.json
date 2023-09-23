@@ -3,11 +3,11 @@
   "neko_mimi": true,
   "name": {
     "CN": {
-      "title": "语音按钮",
+      "title": "憨憨按钮",
       "fullName": ""
     },
     "EN": {
-      "title": "Voives Button",
+      "title": "Sagi Button",
       "fullName": ""
     }
   },
@@ -34,6 +34,10 @@
   "footer": {
     "author": [
       {
+        "name": "Dont39",
+        "url": "https://github.com/Dontcampy"
+      },
+      {
         "name": "Blacktunes",
         "url": "https://github.com/blacktunes"
       }
@@ -41,10 +45,10 @@
     "info": [
       ""
     ],
-    "githubUrl": "https://github.com/blacktunes/voices-button"
+    "githubUrl": "https://github.com/sagi-mura/sagi-button"
   },
   "console": {
-    "text": "https://github.com/blacktunes/voices-button",
+    "text": "https://github.com/sagi-mura/sagi-button",
     "size": "",
     "color": "",
     "img": "",
