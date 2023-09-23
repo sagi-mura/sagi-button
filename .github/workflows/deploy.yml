@@ -4,9 +4,10 @@ on:
   push:
     branches:
       - master
-    paths:
-      - '.github/workflows/*.yml'
+    paths-ignore:
       - 'scripts/*'
+      - 'README.md'
+      - '.gitignore'
 
   workflow_dispatch:
 
