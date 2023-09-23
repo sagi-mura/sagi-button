@@ -1,189 +1,98 @@
-# 语音按钮模板
+# 憨憨按钮 / Sagi 按钮 / Sagi Button
 
-### 需要修改的部分
+![https://www.bilibili.com/read/cv26475893/?spm_id_from=444.42.rich-text.link.click](https://github.com/sagi-mura/sagi-button/blob/master/public/img/sagi.jpg?raw=true)
 
-#### package.json
+### 网页地址
 
-- **name**字段
+- [https://sagi.moe/](http://sagi.moe/)
 
-#### setting 文件夹
+### 相关链接：
 
-- **color.styl** 颜色配置
+- [星河Sagi 的 Bilibili 直播间](https://live.bilibili.com/30180399)
 
-```styl
-<!-- 主颜色 -->
-$main-color = #F5C1BB
-<!-- 夜间模式主颜色 -->
-$main-color-dark = rgba(245,193,187,0.9)
-<!-- 副颜色 -->
-$sub-color = #F5F0F2
-<!-- 夜间模式副颜色 -->
-$sub-color-dark = rgba(245, 240, 242,0.9)
-<!-- 按钮文字颜色 -->
-$btn-text-color = #5F505F
-<!-- 控制栏文字颜色 -->
-$title-color = #5F505F
-<!-- 夜间模式控制栏文字颜色 -->
-$title-color-dark = #999999
-<!-- 控制栏按钮active颜色 -->
-$icon-active-color = #ff9488
-<!-- 按钮hover颜色 -->
-$hover-color = #bbc5cf
-<!-- 按钮active颜色 -->
-$active-color = #93a3b3
-```
+### 参与完善本项目
 
-- **setting.json**项目配置
+- 您可以在[Issues](https://github.com/sagi-mura/sagi-button/issues)提出您的建议。
+- 请求添加新语音，请在[Sagi Button音频收集表](https://docs.qq.com/form/page/DR01DZWpLRHZOUVRI)提交你的音频
+    - 我会不定期将收集表的音频更新到[https://sagi.moe/](http://sagi.moe/)上
+    - 如果你发现收集表中的音频已经被添加到[https://sagi.moe/](http://sagi.moe/)上，那么请不要再次提交
+    - 如果你发现收集表中的音频已经被添加到[https://sagi.moe/](http://sagi.moe/)上，但是你认为音频的质量不够好，请直接Bilibili私信我
 
-```jsonc
-{
-  // 是否使用多语言
-  "i18n": true,
-  // 是否使用猫耳按钮
-  "neko_mimi": true,
-  "name": {
-    "CN": {
-      // Header和网站名
-      "title": "语音按钮",
-      // MediaSession歌手
-      "fullName": ""
-    },
-    "EN": {
-      "title": "Voives Button",
-      "fullName": ""
-    }
-  },
-  // Readme组件显示文字，支持HTML
-  "readme": "",
-  "header": {
-    // Header图标URL
-    "icon": "img/logo.svg",
-    // 外链按钮地址
-    "youtube": "",
-    "twitter": "",
-    "bilibili": ""
-  },
-  // 相关链接，格式与友链相同
-  "related": [],
-  // 友链列表
-  "link": [
-    {
-      // 友链按钮名
-      "name": "Hiiro按钮",
-      // 友链地址
-      "url": "https: //hiiro.club/",
-      // 友链按钮颜色
-      "background": "#F5C1BB",
-      // 友链按钮文字颜色
-      "color": "#5F505F"
-    }
-  ],
-  "footer": {
-    // 作者列表
-    "author": [
-      {
-        // 作者名
-        "name": "Blacktunes",
-        // 作者URL，可选
-        "url": "https://github.com/blacktunes"
-      }
-    ],
-    // 页脚说明列表，支持HTML
-    "info": [""],
-    // 项目Github图标地址
-    "githubUrl": "https://github.com/blacktunes/voices-button"
-  },
-  // 控制台输出
-  "console": {
-    // 控制台输出文字
-    "text": "https://github.com/blacktunes/voices-button",
-    // 字号，默认16px
-    "size": "",
-    // 文字颜色
-    "color": "",
-    // 控制台输出图片名，请放到public/img文件夹
-    "img": "",
-    // 图片宽度，默认100%
-    "imgWidth": "",
-    // 图片高度，默认100%
-    "imgHeight": ""
-  },
-  // MediaSession专辑图片名，请放到public/img文件夹
-  "mediaSession": "",
-  // 语音CDN地址
-  "CDN": ""
-}
-```
+### 添加或修改音频/完善翻译
 
-#### setting/translate 文件夹
+音频文件推荐使用**mp3**格式，请先音量标准化，然后放入`public/voices/`目录
 
-`category.json`和`locales.json`为固定命名，请勿修改
+所有的分类和音频信息都存储在`setting/translate`目录的`json`文件中，**添加或修改音频信息**、**完善翻译**，你需要修改对应文件中的内容
 
-- **category.json** 分类列表
+`locales.json`和`category.json`分别为 UI 界面翻译和分类信息，请不要修改文件名，语音信息可以使用除此外的任意名称，可使用多个`json`文件方便管理语音
+
+可使用`schema`文件夹中的`json`文件增加`json schema`约束和代码提醒
+
+`category.json`结构示例如下：
 
 ```jsonc
 [
   {
-    // 分类命名
     "name": "名言",
-    // 是否隐藏
-    "hide": true,
     "translate": {
-      // 分类中文翻译
-      "zh-CN": "猫猫名言~",
-      // 分类英文翻译
-      "en-US": "witticism~"
+      "zh-CN": "憨憨名言~",
+      "en-US": "Witticisms~"
+    }
+  },
+  {
+    "name": "星河",
+    "translate": {
+      "zh-CN": "星河~",
+      "en-US": "Hoshikawa~"
     }
   }
 ]
 ```
 
-- 语音列表文件可任意命名
+语音文件结构示例如下：
 
 ```jsonc
 [
   {
-    // 语音命名
-    "name": "baba",
-    // 语音文件名
-    "path": "baba.mp3",
-    // 是否隐藏
-    "hide": true,
+    "name": "青眼白龙",
+    "path": "blue-eyes-white-dragon.mp3",
+    "date": "2023-9-23",
     "translate": {
-      // 语音中文翻译
-      "zh-CN": "米娜我是你爸爸",
-      // 语音英语翻译
-      "en-US": "I'm your Baba"
+      "zh-CN": "青眼白龙",
+      "en-US": "Blue eyes white dragon"
     },
-    // 语音所属分类(对应category的name)
-    "category": "名言",
-    // 以下属性为可选
-    // hover时显示图片，请放到public/voices/img目录
     "usePicture": {
-      "zh-CN": "",
-      "en-US": ""
+      "zh-CN": "dragon.jpg",
+      "en-US": "dragon.jpg"
     },
-    // 添加时间
-    "date": "2020-11-11",
-    // 语音出处
+    "category": "名言",
     "mark": {
-      "title": "【Hiiro】读评论 学中文 DD们的评论都是什么东西啊？",
-      "time": "0:01~0:03",
-      "url": "https://www.bilibili.com/video/BV1ET4y177A8"
+      "title": "【唱歌杂谈】星河Sagi 2023年9月12日20点场",
+      "time": "27:56~28:00",
+      "url": "https://www.bilibili.com/video/BV1hz4y1573x"
+    }
+  },
+  {
+    "name": "多拉贡",
+    "path": "dragon.mp3",
+    "date": "2023-9-23",
+    "translate": {
+      "zh-CN": "多拉贡",
+      "en-US": "Dragon"
+    },
+    "usePicture": {
+      "zh-CN": "dragon.jpg",
+      "en-US": "dragon.jpg"
+    },
+    "category": "名言",
+    "mark": {
+      "title": "【唱歌杂谈】星河Sagi 2023年9月12日20点场",
+      "time": "28:00~28:04",
+      "url": "https://www.bilibili.com/video/BV1hz4y1573x"
     }
   }
 ]
 ```
-
-#### public 文件夹
-
-- **index.html**的**title**标签
-- **favicon.ico**(网站图标)
-
-### 说明
-
-- 点击标题可显示**隐藏**
-- 可以的话，请不要删除默认友链
 
 ### LICENSE
 
