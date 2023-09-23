@@ -21,3 +21,9 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Python script
+scripts
+!scripts/last_export_time
+!scripts/parse_excel.py
+!scripts/requirements.txt
