@@ -1,6 +1,7 @@
 import pandas as pd
 import json
 import datetime
+import math
 
 last_export_date_file = "last_export_date"
 # Read date from file
@@ -27,14 +28,20 @@ for index, row in dataframe.iterrows():
     audio["translate"] = {}
     audio["translate"]["zh-CN"] = row["音频中文名（必填）"]
     audio["translate"]["en-US"] = row["音频英文名（必填）"]
-    audio["usePicture"] = {}
-    audio["usePicture"]["zh-CN"] = row["音频相关图片"]
-    audio["usePicture"]["en-US"] = row["音频相关图片"]
+    pic = row["音频相关图片"]
+    if not math.isnan(pic):
+        audio["usePicture"] = {}
+        audio["usePicture"]["zh-CN"] = pic
+        audio["usePicture"]["en-US"] = pic
     audio["category"] = row["音频分类（必填）"]
     audio["mark"] = {}
-    audio["mark"]["title"] = row["来源直播或视频标题（必填）"]
-    audio["mark"]["time"] = row["视频时间"]
-    audio["mark"]["url"] = row["视频链接"]
+    audio["mark"]["title"] = row["标题（必填）"]
+    mark_time = row["视频时间"]
+    if mark_time is str and not math.isnan(mark_time):
+        audio["mark"]["time"] = mark_time
+    mark_url = row["视频链接"]
+    if mark_url is str and not math.isnan(mark_url):
+        audio["mark"]["url"] = mark_url
     print(audio)
     audios.append(audio)
 
