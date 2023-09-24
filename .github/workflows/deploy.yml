@@ -43,4 +43,6 @@ jobs:
           clean: true
           force: true
           single-commit: true
-          clean-exclude: CNAME
+          clean-exclude: | 
+            CNAME
+            .github/workflows/deploy_gitee.yml
