@@ -56,6 +56,6 @@
     "imgHeight": ""
   },
   "mediaSession": "",
-  "CDN": "",
+  "CDN": "https://cdn.jsdelivr.net/gh/sagi-mura/sagi-button@gh-pages/voices",
   "SubmitLink": "https://docs.qq.com/form/page/DR01DZWpLRHZOUVRI"
 }
