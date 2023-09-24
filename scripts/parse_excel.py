@@ -2,12 +2,13 @@ import pandas as pd
 import json
 import datetime
 
-# Read time from file
-with open("last_export_time", "r") as f1:
-    last_export_time_str = f1.read()
-    if last_export_time_str == "":
-        last_export_time_str = "2021-01-01 00:00:00"
-    last_export_time = pd.to_datetime(last_export_time_str)
+last_export_date_file = "last_export_date"
+# Read date from file
+with open(last_export_date_file, "r") as f1:
+    last_export_date = f1.read()
+    if last_export_date == "":
+        last_export_date = "2023-08-22"
+    last_export_date = pd.to_datetime(last_export_date)
 
 pd.set_option('display.notebook_repr_html', False)
 # Load xlsx
@@ -16,8 +17,8 @@ dataframe = pd.read_excel(io='./Sagi Button音频收集.xlsx', header=0)
 audios = []
 for index, row in dataframe.iterrows():
     submit_time: pd.Timestamp = row["提交时间（自动）"]
-    # Skip if submit_time is before last_export_time
-    if submit_time <= last_export_time:
+    # Skip if submit_time is before last_export_date
+    if submit_time <= last_export_date:
         continue
     audio = {}
     audio["name"] = row["音频中文名（必填）"]
@@ -37,9 +38,11 @@ for index, row in dataframe.iterrows():
     print(audio)
     audios.append(audio)
 
+now_date = datetime.datetime.now().strftime("%Y-%m-%d")
+
 jsonstr = json.dumps(audios, indent=2, ensure_ascii=False)
-with open("outputs.json", "w", encoding="utf8") as outputs:
+with open(f"{now_date}.json", "w", encoding="utf8") as outputs:
     outputs.write(jsonstr)
 
-with open("last_export_time", "w") as f2:
-    f2.write(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+with open(last_export_date_file, "w") as f2:
+    f2.write(now_date)
