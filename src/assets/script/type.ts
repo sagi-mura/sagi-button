@@ -46,7 +46,8 @@ export enum INFO_I18N {
   hideLastDate = 'hideLastDate',
   voiceTotalTip = 'voiceTotalTip',
   playTimes = 'playTimes',
-  lang = 'lang'
+  lang = 'lang',
+  submit = 'submit',
 }
 
 /**

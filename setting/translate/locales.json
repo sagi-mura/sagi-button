@@ -36,7 +36,8 @@
     "voiceTotalTip": "当前语音量",
     "playTimes": "累计播放次数",
     "lang": "Change to English",
-    "unknown": "不太清楚出自哪"
+    "unknown": "不太清楚出自哪",
+    "submit": "提交音频"
   },
   "en-US": {
     "info": {
@@ -76,6 +77,7 @@
     "voiceTotalTip": "Current voice quantity",
     "playTimes": "Play times",
     "lang": "切换至简体中文",
-    "unknown": "Unknown"
+    "unknown": "Unknown",
+    "submit": "Submit audio"
   }
 }

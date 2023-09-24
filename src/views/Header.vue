@@ -34,6 +34,9 @@
           <Search />
         </div>
       </transition>
+      <div class="submit_audio">
+        <a v-bind:href=SubmitLink target="_blank">{{ t(INFO_I18N.submit) }}</a>
+      </div>
       <div class="btn" :title="t(INFO_I18N.lang)" @click="changeLang" v-if="i18n">
         <svg
           viewBox="0 0 1024 1024"
@@ -72,6 +75,8 @@ const HEADER: {
   twitter?: string;
   bilibili?: string;
 } = Setting['header'] || {}
+
+const SubmitLink = Setting['SubmitLink'] || ''
 
 const onLogoClick = (logo: Ref<HTMLElement>) => {
   let isRestart = false
