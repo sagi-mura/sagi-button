@@ -24,6 +24,6 @@ pnpm-debug.log*
 
 # Python script
 scripts/*
-!scripts/last_export_time
+!scripts/last_export_date
 !scripts/parse_excel.py
 !scripts/requirements.txt
