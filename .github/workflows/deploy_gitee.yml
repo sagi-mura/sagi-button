@@ -15,4 +15,4 @@ jobs:
 
       - name: Deploy
         run: |
-          git push --force https://dontcampy:${{ secrets.GITEE_PAT }}@gitee.com/sagi-mura/button.git  ${{ github.ref }}:master
+          git push --force https://dontcampy:${{ secrets.GITEE_PAT }}@gitee.com/sagi-button/sagi-button.git  ${{ github.ref }}:master
